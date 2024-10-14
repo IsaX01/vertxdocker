@@ -58,6 +58,6 @@ jobs:
           script: |
             docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/app:latest
-            docker stop app || true
-            docker rm app || true
-            docker run -d --name app -p 8888:8888 ${{ secrets.DOCKERHUB_USERNAME }}/app:latest
+            docker stop vertxdocker || true
+            docker rm vertxdocker || true
+            docker run -d --name vertxdocker -p 8888:8888 ${{ secrets.DOCKERHUB_USERNAME }}/app:latest
