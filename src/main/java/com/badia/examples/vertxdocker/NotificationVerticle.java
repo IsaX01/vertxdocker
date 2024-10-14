@@ -32,6 +32,7 @@ public class NotificationVerticle extends AbstractVerticle{
         });
     }
     
+    
     private void sendPushNotification(JsonObject eventData) {
         try {
             Message message = Message.builder()
