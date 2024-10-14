@@ -27,6 +27,7 @@ public class MainVerticle extends AbstractVerticle {
     //   }
     // });
     // FileInputStream serviceAccount = new FileInputStream("config/xeventsnotifications-firebase-adminsdk-3ny8e-e1061efeb8.json");
+    
     InputStream serviceAccount = getClass().getClassLoader().getResourceAsStream("config/xeventsnotifications-firebase-adminsdk-3ny8e-e1061efeb8.json");
     if (serviceAccount == null) {
       System.err.println("Credentials file not found.");
