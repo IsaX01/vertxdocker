@@ -64,6 +64,7 @@ public class NotificationVerticle extends AbstractVerticle{
         }
     }
     
+    
     private String generateGoogleCalendarLink(JsonObject eventData) {
         String baseUrl = "https://www.google.com/calendar/render?action=TEMPLATE";
         String text = "&text=" + URLEncoder.encode(eventData.getString("name"), StandardCharsets.UTF_8);
