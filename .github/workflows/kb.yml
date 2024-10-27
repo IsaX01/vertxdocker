@@ -55,7 +55,7 @@ jobs:
           context: .
           push: true
           tags: gcr.io/${{ secrets.GCP_PROJECT_ID }}/app:latest
-
+          
 
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v2
