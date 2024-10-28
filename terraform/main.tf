@@ -5,7 +5,7 @@ provider "google" {
 }
 
 resource "google_container_cluster" "primary" {
-  name     = "cluster-1"
+  name     = "cluster-2"
   location = var.zone
   deletion_protection = false
 
