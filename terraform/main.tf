@@ -8,11 +8,22 @@ resource "google_container_cluster" "primary" {
   name     = "cluster-1"
   location = var.zone
   deletion_protection = false
+  network  = "projects/${var.project}/global/networks/default"
 
-  initial_node_count = 1
 
   node_config {
     machine_type = "e2-micro"
+  }
+
+  lifecycle {
+    ignore_changes = [
+      # Atributos y bloques a ignorar
+      addons_config,
+      master_auth,
+      node_config,
+      node_pool,
+      # Otros atributos si es necesario
+    ]
   }
 }
 
