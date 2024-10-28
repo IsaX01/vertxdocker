@@ -1,4 +1,4 @@
 output "kubernetes_cluster_name" {
-  description = "cluster-2"
+  description = "cluster-1"
   value       = google_container_cluster.primary.name
 }
