@@ -70,3 +70,10 @@ resource "kubernetes_service" "app_service" {
     }
   }
 }
+
+terraform {
+  backend "gcs" {
+    bucket  = "terraform-state-isax01"
+    prefix  = "terraform/state"
+  }
+}
