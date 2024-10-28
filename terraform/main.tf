@@ -7,6 +7,7 @@ provider "google" {
 resource "google_container_cluster" "primary" {
   name     = "cluster-1"
   location = var.zone
+  deletion_protection = false
 
   initial_node_count = 1
 
