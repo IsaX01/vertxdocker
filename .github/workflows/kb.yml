@@ -65,7 +65,7 @@ jobs:
         working-directory: ./terraform
 
       - name: Terraform Import Cluster
-        run: terraform import google_container_cluster.primary projects/${{ secrets.GCP_PROJECT_ID }}/locations/us-central1-c/clusters/cluster-2 || true        
+        run: terraform import google_container_cluster.primary projects/${{ secrets.GCP_PROJECT_ID }}/locations/us-central1-c/clusters/cluster-1 || true        
         working-directory: ./terraform
 
       - name: Terraform Plan
