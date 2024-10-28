@@ -46,7 +46,7 @@ resource "kubernetes_deployment" "app" {
         container {
           image = "gcr.io/${var.project}/app:latest"
           name  = "app-container"
-          ports {
+          port {
             container_port = 8080
           }
         }
