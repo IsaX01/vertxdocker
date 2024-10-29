@@ -73,4 +73,5 @@ public class NotificationVerticle extends AbstractVerticle{
         String location = "&location=" + URLEncoder.encode(eventData.getString("place"), StandardCharsets.UTF_8);
         return baseUrl + text + dates + details + location;
     }
+    
 }
